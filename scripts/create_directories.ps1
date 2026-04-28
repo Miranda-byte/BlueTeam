@@ -1,10 +1,7 @@
-# Ask user for folder names (comma-separated)
 $inputFolders = Read-Host "Enter folder names (separated by commas)"
 
-# Split input into an array and trim spaces
 $folders = $inputFolders -split "," | ForEach-Object { $_.Trim() }
 
-# Ask for base directory (optional)
 $basePath = Read-Host "Enter base path (leave blank for current directory)"
 if ([string]::IsNullOrWhiteSpace($basePath)) {
     $basePath = Get-Location
