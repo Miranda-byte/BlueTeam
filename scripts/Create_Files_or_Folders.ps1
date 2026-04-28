@@ -1,7 +1,7 @@
 ﻿$inputFolders = Read-Host "Enter the name of the file you want to load"
 $folders = Get-Content $inputFolders
 
-$filetype = Read-Host "Would it be Directories or Files"
+$filetype = Read-Host "Would it be Directory or File"
 
 $basePath = Read-Host "Enter base path (leave blank for current directory)"
 if ([string]::IsNullOrWhiteSpace($basePath)) {
